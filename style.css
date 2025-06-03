@@ -1141,6 +1141,76 @@ section .title::after {
 .fa-solid {
   color: #fff;
 }
+.social-icons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons .icon {
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  background: #1e3551;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-icons .icon:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.social-icons .github:hover {
+  background: #333;
+}
+
+.social-icons .linkedin:hover {
+  background: #0077b5;
+}
+.contact .icon-link {
+  font-size: 24px;
+  width: 42px;
+  height: 42px;
+  margin-right: 15px;
+  background: #1e3551;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact .icon-link:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.contact .icon-link.github:hover {
+  background: #333;
+}
+.contact .icon-link.linkedin:hover {
+  background: #0077b5;
+}
+.contact .sub-title a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.contact .sub-title a:hover {
+  text-decoration: underline;
+  color: #1e3551;
+}
 
 /*  Footer  */
 footer {
