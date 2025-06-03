@@ -26,6 +26,11 @@ $(document).ready(function () {
   $(".navbar .menu li a").click(function () {
     //  Smooth scroll on Menu Items click  //
 
+    $("html, body").animate(
+      {
+        scrollTop: $(this.hash).offset().top,
+      },
+      1000);
     $("html").css("scrollBehavior", "smooth");
   });
 
@@ -87,4 +92,22 @@ $(document).ready(function () {
       }
     }
   });
+
+  // Animate hobby headings on scroll
+  const hobbyHeadings = document.querySelectorAll('.hobbies .column h3');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        // Optionally, unobserve after animation to prevent re-triggering
+        // observer.unobserve(entry.target);
+      } else {
+        // Optionally remove the class if the animation should replay on scroll back
+        // entry.target.classList.remove('animate');
+      }
+    });
+  }, { threshold: 0.5 }); // Adjust threshold as needed
+
+  hobbyHeadings.forEach(heading => observer.observe(heading));
 });
