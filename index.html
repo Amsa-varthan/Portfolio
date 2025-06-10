@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="profile-card.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  integrity="sha512-... (optional hash)"
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
 
@@ -22,6 +22,8 @@
       <img src="https://motionbgs.com/dl/gif/1395" alt="Loading..." />
     </div>
   </div>
+
+  <canvas id="splashCanvas" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;"></canvas>
 
   <!-- Scroll Up Button -->
   <div class="scroll-up-btn">
@@ -49,7 +51,7 @@
   <section class="home" id="home">
     <div class="max-width">
       <div class="home-content">
-        <div class="text-1">Hello,my name is</div>
+        <div class="text-1">Hello, my name is</div>
         <div class="text-2">AmsaVarthan</div>
         <div class="text-3">And I'm an Aspiring <span class="typing"></span></div>
         <a href="#contact">Hire me</a>
@@ -57,26 +59,36 @@
     </div>
   </section>
 
-  <!-- About Section -->
+
+ <!-- About Section -->  
   <section class="about" id="about">
     <div class="max-width">
       <h2 class="title">About me</h2>
       <div class="about-content">
-        <div class="left">
-          <img src="profile.jpg.png" alt="Profile" />
-        </div>
-        <div class="right">
-          <div class="text">I'm Amsa and I'm a <span class="typing-2"></span></div>
-          <p>A passionate learner at the intersection of creativity and technology,I’m currently pursuing a BSc in Computer Science with a focus on Artificial Intelligence at MRCAS.With a foundation in graphic design,earned through a diploma at Dream Zone,I’ve spent years honing my skills in visual storytelling and digital design.  
-
-As a graphic designer,I blend my artistic sensibilities with technical expertise to create impactful,visually compelling designs. My journey began when i was 12 years old,and now,I’m expanding my knowledge to bridge the gap between design and AI, opening new possibilities in how we interact with technology.  
-
-I’m actively building a portfolio that showcases my design work and evolving AI projects.It’s a window into my world—where creativity meets cutting-edge technology.</p>
-          <a href="#contact">Download Résumé</a>
-        </div>
-      </div>
+         <!-- Profile Card Integration -->
+   <div class="left">
+    <div class="max-width">
+      <div id="profile-card-wrapper"></div>
     </div>
-  </section>
+    </div>
+       <!-- Text Content Column -->
+       <div class="right">
+        <div class="text">I'm Amsa and I'm a <span class="typing-2"></span></div>
+        <p>
+          A passionate learner at the intersection of creativity and technology, I’m currently pursuing a BSc in Computer Science with a focus on Artificial Intelligence at MRCAS.
+          With a foundation in graphic design, earned through a diploma at Dream Zone, I’ve spent years honing my skills in visual storytelling and digital design.
+          <br><br>
+          As a graphic designer, I blend my artistic sensibilities with technical expertise to create impactful, visually compelling designs. My journey began when I was 12 years old, and now, I’m expanding my knowledge to bridge the gap between design and AI, opening new possibilities in how we interact with technology.
+          <br><br>
+          I’m actively building a portfolio that showcases my design work and evolving AI projects. It’s a window into my world—where creativity meets cutting-edge technology.
+        </p>
+        <a href="amsa_resume.pdf" download target="_blank">Download Résumé</a>
+      </div>
+
+    </div>
+  </div>
+</section> 
+        
 
   <!-- Services Section -->
 <section class="services" id="services">
@@ -201,13 +213,13 @@ I played a role as a team leader in MSME hackathons and Node.JS in app developme
 
   <!-- DESIGNING GALLERY SECTION WITH SPACING -->
   <div class="designing-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 40px auto;">
-    <img src="1.jpg" alt="Design 1" style="width: 120%; height: 600px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
-    <img src="2.jpg" alt="Design 2" style="width: 120%; height: 600px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
-    <img src="3.jpg" alt="Design 3" style="width: 120%; height: 600px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
-    <img src="4.jpg" alt="Design 4" style="width: 120%; height: 600px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
-    <img src="5.jpg" alt="Design 5" style="width: 120%; height: 600px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
-    <img src="6.jpg" alt="Design 6" style="width: 120%; height: 600px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
-    <img src="7.jpg" alt="Design 7" style="width: 120%; height: 600px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+    <img src="1.jpg" alt="Design 1" style="width: 130%; height: 610px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+    <img src="2.jpg" alt="Design 2" style="width: 130%; height: 610px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+    <img src="3.jpg" alt="Design 3" style="width: 130%; height: 610px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+    <img src="4.jpg" alt="Design 4" style="width: 130%; height: 610px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+    <img src="5.jpg" alt="Design 5" style="width: 130%; height: 610px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+    <img src="6.jpg" alt="Design 6" style="width: 130%; height: 610px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+    <img src="7.jpg" alt="Design 7" style="width: 130%; height: 610px; object-fit: cover; border-radius: 10px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
   </div>
 
   <!-- SPACER BETWEEN DESIGNING AND GYMNASIUM -->
@@ -321,14 +333,15 @@ I played a role as a team leader in MSME hackathons and Node.JS in app developme
       </div>
     </div>
   </section>
- 
+
   <!-- Footer -->
   <footer>
     <span>Created By AmsaVarthan | © 2025 All rights reserved.</span>
   </footer>
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"></script>
+  <script src="profile-card.js"></script>
 
   <script>
     // Loader
@@ -351,29 +364,21 @@ I played a role as a team leader in MSME hackathons and Node.JS in app developme
     menuBtn.onclick = () => {
       menu.classList.toggle("active");
     };
-  // Home section typing animation
-  const typed = new Typed(".typing", {
-    strings: ["Data Scientist",
-      "Graphic Designer",
-      "Web Developer",
-      "Artist",
-      "Financial Analyst"],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true
-  });
 
-  // About section typing animation
-  const typed2 = new Typed(".typing-2", {
-    strings: ["Problem Solver",
-      "Tech learner",
-      "Programmer",
-      "Creative Thinker",
-      "Tech Enthusiast"],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true
-  });
+    // Typing animations
+    new Typed(".typing", {
+      strings: ["Data Scientist", "Graphic Designer", "Web Developer", "Artist", "Financial Analyst"],
+      typeSpeed: 100,
+      backSpeed: 60,
+      loop: true
+    });
+
+    new Typed(".typing-2", {
+      strings: ["Problem Solver", "Tech learner", "Programmer", "Creative Thinker", "Tech Enthusiast"],
+      typeSpeed: 100,
+      backSpeed: 60,
+      loop: true
+    });
   </script>
 </body>
 </html>
